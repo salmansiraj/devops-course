@@ -1,2 +1,48 @@
 Lecture 3 (Automating Builds):
+    - Build tools are programs that automate the creating of various 
+        involved in some project 
+    - The thing built may be a complete program, portion of a program,
+        documentation, database config, Docker container
     
+    - make: Used to specify a dependency followed by a rule 
+        - Runs through all compilations and linking sourcecode
+    - Maven: Build tool uses XML that will will perform any kind of build, 
+        deploy, test and release task with a single command as long as we
+        conform to the structure dictated by Maven. 
+    
+    - makefile structure:
+        - Target, that we seek to build
+        - List of dependencies. which tagets depend on 
+        - Commands to be run to build target from its dependencies 
+        - Components will be assembled together via makefile 
+
+    CI/CD
+    CI: Continuous Integration
+        - Code should be pushed to master regularly making sure that it integrates
+            with other code in branch 
+            - Running auto code quality tests 
+            - Building exec from code 
+            - Reporting on code testing coverage 
+            - Building docker container that can be used to deploy code 
+    
+    CD: Continuous Delivery 
+        - Result of the continuos integration is delivered to place to run. 
+            lace can be test server/dev/production, etc.
+        - Eg. Travis CI & Jenkins 
+
+    Jenkins: 
+        - Automates product pipeline
+        1. Pulls from repository
+        2. At anytime, can submit new code to CI Server to create a build (using maven)
+        3. Validates tests that were created, if invalidated prevents from build
+            to break and goes back to developer
+        4. Then goes to tester, where it validates if the code matches the rest of the 
+            code in the current build
+        5. Then you release and deploy/deliver
+    
+    Travis CI uses YAML file for configurations and webhooks: 
+        - Contains directives as to how to build should be performed 
+        - Directived specify what to install, services to employ, 
+            set envirable variables, main script to run, install sections, 
+            and directions of what to do if build succeed or fails
+

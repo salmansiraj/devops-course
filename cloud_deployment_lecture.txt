@@ -1,0 +1,56 @@
+Cloud Deployment: 
+    - On demand self-service, instead of having it executed for you
+    - Ubiquitious network access 
+    - Scalability:
+        - Property of growing amount of work thorugh adding to system 
+        Horizontal:
+            * Adding additional servers (nodes)
+        Vertical:
+            * Adding more resouces to a single server (node)
+            * Don't have to deal with multiple changes in architectures 
+        
+    - Heroku: 
+        - platform as a service, allows full infrastructure needed to run 
+            an application, such as DB, load balancer, data caches, etc 
+   
+    
+    - Docker: 
+        - Containerizng an app to deploy to the cloud in order to allow the 
+            application to work across different server architectures
+        - If you have multiple instances, you recommand docker run app 
+        - Set of tools and scripts, that will run multiple docker hosts
+
+    - Kubernetes:
+        - Orchestrater of a number of inter-related Docker containers 
+        - Allows to run thousands instances of containers of the same app
+            inside one kubernetes cluster inn one single command 
+        - Can be scaled automatically to upgrade or downgrade
+    
+    Node: Where the instance of application is present 
+    Clusters: Set of nodes in order to keep track of when one node fails
+        -  Master node: Watches over the nodes in the cluster 
+        - API server is the frontend of the cluster to talk to the application 
+        - etcd : stores all information across all the nodes 
+    
+    - Cloud providers: AWS, Google Cloud, Azure, Digital Ocean, IBM Cloud 
+    
+Microservices
+    Loose coupling of services in an application allows for flexibility and scalibility 
+    - Example (Online Store)
+        - Online payment service 
+        - Order fulfillment service 
+        - Order tracking service 
+        - etc. 
+
+    - Monolith architecture: Having all features in one service becomes difficult as you dont know which 
+        services is causing a fail in the server
+        - Where microservices allows to change each service individually 
+    
+    - Nginx: -> Distribtued Caching (reducing network calls)
+        - Does multiple docker containers or servers 
+        - NginX on top as a single endpoint and it will act as a load balancer and created decisions
+        - This distribution of requests will allow to allow the load 
+    
+
+
+
