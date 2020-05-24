@@ -1,0 +1,25 @@
+Lecture 1 (Agile):
+    Kanban Board:
+        Project Board Format
+            1. Backlog 
+            2. In Progress 
+            3. Peer Review 
+            4. In Test 
+            5. Done 
+            6. Blocked 
+
+    Scrum: Method of managing software where team divides work to sprints
+        - Sprint Planning:
+            * Sprints usually run 2 weeks
+        - Epic 
+            * Large feature that can be broken down into stories 
+        - Stories 
+            * Small body of work / actionable item 
+        - Task
+            * Decomposed parts of story showing how story is completed 
+        - Standup Format:
+            1. What you worked on yesterday?
+            2. What are you planning to work on today?
+            3. Any Blockers/Concerns?
+    
+    

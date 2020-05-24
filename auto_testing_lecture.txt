@@ -1,0 +1,39 @@
+Lecture 2 (Automated Testing):
+    Test Pyramid:
+        - Unit Tests for Classes + Methods 
+        - Integration Tests to check feature top-down 
+        - Accepztance Test : User version 
+    Terms To Know: 
+        - Fixture: Prepared data to be loaded to DB 
+        - Fake: actual object created to test with fake data 
+        - Stub: Crude imitation of real object returning hard-coded vals
+        - Mock: Elegant imitation of object 
+        - Test Suite: Set of tests serving specific purpose 
+    Anatomy of Test Case:
+        a. setUp()
+        b. test_method_name 
+        c. Assert Kinds:
+                assertEqual(a, b): a == b
+                assertNotEqual(a, b): a != b
+                assertTrue(x): bool(x) is True
+                assertFalse(x): bool(x) is False
+                assertIs(a, b): a is b
+                assertIsNot(a, b): a is not b
+                assertIsNone(x): x is None
+                assertIsNotNone(x): x is not None
+                assertIn(a, b): a in b
+                assertNotIn(a, b): a not in b
+                assertIsInstance(a, b): isinstance(a, b)
+                assertNotIsInstance(a, b): not isinstance(a, b)
+    Turning Requirements to Tests: 
+        a. Turn use cases to Tests
+        b. Feature file & steps 
+        c. Adding acceptance tests to JIRA 
+    Test Framework: 
+        for every test in test_class:
+            test_class.setUp()
+            success = run test
+            if not success:
+                exit with error message
+            test_class.tearDown()
+        exit with success message
